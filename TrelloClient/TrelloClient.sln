@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrelloClient", "TrelloClient\TrelloClient.csproj", "{4F8B8899-71C1-4415-81D1-1CEB4A91FFA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F8B8899-71C1-4415-81D1-1CEB4A91FFA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F8B8899-71C1-4415-81D1-1CEB4A91FFA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F8B8899-71C1-4415-81D1-1CEB4A91FFA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F8B8899-71C1-4415-81D1-1CEB4A91FFA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C11879D4-EDBC-4519-88FE-4A44B18B8814}
+	EndGlobalSection
+EndGlobal

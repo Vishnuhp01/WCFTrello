@@ -1,0 +1,18 @@
+﻿@model IEnumerable<TrelloClient.Models.Board>
+
+@{
+    ViewBag.Title = "BoardsDisplay";
+}
+
+<h2>Your Boards</h2>
+<div class="text-center">
+    <hr />
+    @{
+        foreach (var item in Model)
+        {
+
+            <p class="alert alert-success">@Html.ActionLink(item.Boardname, "ShowBoard", "Home", new { id = item.Id }, null)</p>
+            <hr />
+        }
+    }
+</div>

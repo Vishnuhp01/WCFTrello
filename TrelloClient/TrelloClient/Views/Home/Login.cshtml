@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+<h2>Login</h2>
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    //this is for create form tag
+
+<div>
+    <br /><br />
+    <label class="text-info"> Username: </label>&nbsp; <input class="input-sm" type="text" name="uname" />
+    <br /><br />
+    <label class="text-info"> Password: </label>&nbsp; <input class="input-sm" type="text" name="pass" />
+    <br /><br />
+    <button class="btn btn-success" type="submit">Login</button>
+</div>
+
+}
+
+@{
+    if (ViewBag.IsLoggedIn == true)
+    {
+        <br />
+        <p class="alert-success alert text-center">Log-In Successful</p>
+        <p class="alert-success alert text-center">Welcome @ViewBag.CurrentUserName</p>
+        
+    }
+}
+
+

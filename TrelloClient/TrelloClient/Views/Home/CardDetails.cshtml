@@ -1,0 +1,50 @@
+﻿@model TrelloClient.Models.Card
+
+@{
+    ViewBag.Title = "CardDetails";
+}
+
+<h2>CardDetails</h2>
+
+<div>
+    <h4>Card</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cardname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cardname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cinfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cinfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Creater)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Creater)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

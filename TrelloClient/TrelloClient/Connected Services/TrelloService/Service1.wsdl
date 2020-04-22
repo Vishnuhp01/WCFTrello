@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Scrum/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Scrum/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Scrum/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Scrum" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Scrum/Service1/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="IService1_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_register_InputMessage">
+    <wsdl:part name="parameters" element="tns:register" />
+  </wsdl:message>
+  <wsdl:message name="IService1_register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addBoard_InputMessage">
+    <wsdl:part name="parameters" element="tns:addBoard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addBoard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addBoardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addList_InputMessage">
+    <wsdl:part name="parameters" element="tns:addList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fetchBoard_InputMessage">
+    <wsdl:part name="parameters" element="tns:fetchBoard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fetchBoard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fetchBoardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fetchList_InputMessage">
+    <wsdl:part name="parameters" element="tns:fetchList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fetchList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fetchListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fetchCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:fetchCard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fetchCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fetchCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fetchUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:fetchUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fetchUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fetchUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateCard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:delCard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:delCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/login" message="tns:IService1_login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loginResponse" message="tns:IService1_login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/register" message="tns:IService1_register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registerResponse" message="tns:IService1_register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addBoard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addBoard" message="tns:IService1_addBoard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addBoardResponse" message="tns:IService1_addBoard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addList" message="tns:IService1_addList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addListResponse" message="tns:IService1_addList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addCard" message="tns:IService1_addCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addCardResponse" message="tns:IService1_addCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchBoard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/fetchBoard" message="tns:IService1_fetchBoard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/fetchBoardResponse" message="tns:IService1_fetchBoard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/fetchList" message="tns:IService1_fetchList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/fetchListResponse" message="tns:IService1_fetchList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/fetchCard" message="tns:IService1_fetchCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/fetchCardResponse" message="tns:IService1_fetchCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/fetchUsers" message="tns:IService1_fetchUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/fetchUsersResponse" message="tns:IService1_fetchUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateCard" message="tns:IService1_updateCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateCardResponse" message="tns:IService1_updateCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/delCard" message="tns:IService1_delCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/delCardResponse" message="tns:IService1_delCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/IService1/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="register">
+      <soap:operation soapAction="http://tempuri.org/IService1/register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBoard">
+      <soap:operation soapAction="http://tempuri.org/IService1/addBoard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addList">
+      <soap:operation soapAction="http://tempuri.org/IService1/addList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCard">
+      <soap:operation soapAction="http://tempuri.org/IService1/addCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchBoard">
+      <soap:operation soapAction="http://tempuri.org/IService1/fetchBoard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchList">
+      <soap:operation soapAction="http://tempuri.org/IService1/fetchList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchCard">
+      <soap:operation soapAction="http://tempuri.org/IService1/fetchCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchUsers">
+      <soap:operation soapAction="http://tempuri.org/IService1/fetchUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCard">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delCard">
+      <soap:operation soapAction="http://tempuri.org/IService1/delCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Scrum/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

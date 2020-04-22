@@ -5,3 +5,10 @@ C:\Users\kmc\source\repos\Scrum\Scrum\obj\Debug\Scrum.csprojAssemblyReference.ca
 C:\Users\kmc\source\repos\Scrum\Scrum\obj\Debug\Scrum.csproj.CoreCompileInputs.cache
 C:\Users\kmc\source\repos\Scrum\Scrum\obj\Debug\Scrum.dll
 C:\Users\kmc\source\repos\Scrum\Scrum\obj\Debug\Scrum.pdb
+D:\0_Drive_E\SEM-6\SOC\Scrum Latest\Scrum\Scrum\bin\Debug\Scrum.dll.config
+D:\0_Drive_E\SEM-6\SOC\Scrum Latest\Scrum\Scrum\bin\Debug\Scrum.dll
+D:\0_Drive_E\SEM-6\SOC\Scrum Latest\Scrum\Scrum\bin\Debug\Scrum.pdb
+D:\0_Drive_E\SEM-6\SOC\Scrum Latest\Scrum\Scrum\obj\Debug\Scrum.csprojAssemblyReference.cache
+D:\0_Drive_E\SEM-6\SOC\Scrum Latest\Scrum\Scrum\obj\Debug\Scrum.csproj.CoreCompileInputs.cache
+D:\0_Drive_E\SEM-6\SOC\Scrum Latest\Scrum\Scrum\obj\Debug\Scrum.dll
+D:\0_Drive_E\SEM-6\SOC\Scrum Latest\Scrum\Scrum\obj\Debug\Scrum.pdb

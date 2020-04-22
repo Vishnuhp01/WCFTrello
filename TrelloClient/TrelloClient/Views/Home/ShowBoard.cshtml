@@ -1,0 +1,26 @@
+﻿@model TrelloClient.Models.Board
+@using TrelloClient;
+@{
+    ViewBag.Title = "ShowBoard";
+}
+
+<h2>Lists of Board: @Session["CurrentBoardName"]</h2>
+
+
+<div class="text-center">
+    <hr />
+    @{
+        foreach (TrelloClient.Models.Lists i in ViewBag.Lists)
+        {
+
+            <p class="alert alert-success">@Html.ActionLink(i.Listname, "ShowCards", "Home", new { id = i.Id }, new { @class = "" })</p>
+            <hr />
+        }
+    }
+</div>
+
+
+<br />
+<p>
+    @Html.ActionLink("< Back to List of Boards", "BoardsDisplay", "Home", null, null)
+</p>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Scrum" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Scrum" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfBoard">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Board" nillable="true" type="tns:Board" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBoard" nillable="true" type="tns:ArrayOfBoard" />
+  <xs:complexType name="Board">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Boardname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Creater" type="xs:int" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Board" nillable="true" type="tns:Board" />
+  <xs:complexType name="ArrayOfLists">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Lists" nillable="true" type="tns:Lists" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLists" nillable="true" type="tns:ArrayOfLists" />
+  <xs:complexType name="Lists">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Creater" type="xs:int" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Listname" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Lists" nillable="true" type="tns:Lists" />
+  <xs:complexType name="ArrayOfCard">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Card" nillable="true" type="tns:Card" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCard" nillable="true" type="tns:ArrayOfCard" />
+  <xs:complexType name="Card">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cardname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cinfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Creater" type="xs:int" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Card" nillable="true" type="tns:Card" />
+  <xs:complexType name="CompositeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+</xs:schema>

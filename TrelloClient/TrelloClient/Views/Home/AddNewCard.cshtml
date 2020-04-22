@@ -1,0 +1,47 @@
+﻿@model TrelloClient.Models.Card
+
+@{
+    ViewBag.Title = "Add New Card";
+}
+
+<h2>Add New Card</h2>
+
+@using (Html.BeginForm("AddNewCard", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cardname, "Card Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Cardname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Cardname, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cinfo, "Card Info.", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Cinfo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Cinfo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@{
+    string s = Session["CurrentListId"].ToString();
+}
+<br />
+<a href="/Home/ShowCards/@s">&lt; Back to list of Cards</a>
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@

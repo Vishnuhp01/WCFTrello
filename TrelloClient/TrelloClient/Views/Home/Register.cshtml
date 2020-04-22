@@ -1,0 +1,43 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm("Register", "Home", FormMethod.Post))
+{
+<div>
+    <br /><br />
+    <label class="text-info"> Username: </label>&nbsp;&nbsp;&nbsp; <input class="input-sm" type="text" name="uname" />
+    <br /><br />
+    <label class="text-info"> Password: </label>&nbsp;&nbsp;&nbsp; <input class="input-sm" type="text" name="pass" />
+    <br /><br />
+    <label class="text-info"> Email: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input class="input-sm" type="text" name="email" />
+    <br /><br />
+    <label class="text-info"> Contact No.: </label>&nbsp; <input class="input-sm" type="text" name="contact" />
+    <br /><br />
+    <button class="btn btn-success" type="submit">Register</button>
+</div>
+
+}
+
+@{
+    if (ViewBag.IsRegistered == true)
+    {
+        <br />
+        <p>asdasd</p>
+        <p class="alert-success alert text-center">Registered Successfully</p>
+        <p class="alert-success alert text-center">Welcome @ViewBag.RegisteredUserName</p>
+    }
+    if(ViewBag.IsRegistered == false)
+    {
+        <br />
+        <p class="alert-success alert text-center">Registered Unsuccessful</p>
+        <p class="alert-success alert text-center">Welcome @ViewBag.RegisteredUserName</p>
+    }
+}
+
+

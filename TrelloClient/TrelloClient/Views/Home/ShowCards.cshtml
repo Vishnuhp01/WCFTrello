@@ -1,0 +1,25 @@
+﻿@using TrelloClient;
+@{
+    ViewBag.Title = "ShowCards";
+}
+
+<h2>Cards of List: @Session["CurrentListName"]</h2>
+
+
+<div class="text-center">
+    <hr />
+    @{
+        foreach (TrelloClient.Models.Card i in ViewBag.Cards)
+        {
+            <p class="alert alert-success">@Html.ActionLink(i.Cardname, "CardDetails", "Home", new { id = i.Id }, new { @class = "" })</p>
+            <hr />
+        }
+    }
+</div>
+
+@Html.ActionLink("Add New Card", "AddNewCard", "Home", null, null)
+@{ 
+    string s = Session["CurrentBoardId"].ToString();
+}
+<br />
+<a href="/Home/ShowBoard/@s">&lt; Back to list</a>

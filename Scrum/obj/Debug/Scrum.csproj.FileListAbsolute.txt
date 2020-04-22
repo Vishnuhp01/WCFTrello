@@ -1,7 +1,0 @@
-C:\Users\kmc\source\repos\Scrum\Scrum\bin\Debug\Scrum.dll.config
-C:\Users\kmc\source\repos\Scrum\Scrum\bin\Debug\Scrum.dll
-C:\Users\kmc\source\repos\Scrum\Scrum\bin\Debug\Scrum.pdb
-C:\Users\kmc\source\repos\Scrum\Scrum\obj\Debug\Scrum.csprojAssemblyReference.cache
-C:\Users\kmc\source\repos\Scrum\Scrum\obj\Debug\Scrum.csproj.CoreCompileInputs.cache
-C:\Users\kmc\source\repos\Scrum\Scrum\obj\Debug\Scrum.dll
-C:\Users\kmc\source\repos\Scrum\Scrum\obj\Debug\Scrum.pdb

@@ -15,7 +15,7 @@ namespace Scrum
         string GetData(int value);
 
         [OperationContract]
-        int login(string username, string password);
+        User login(string username, string password);
 
         [OperationContract]
         bool register(string username, string password, string email, string contact);
@@ -30,14 +30,14 @@ namespace Scrum
         bool addCard(int user_id, string cardname, int list_id, string c_info);
 
         [OperationContract]
-        List<int> fetchBoard(int user_id);
+        List<Board> fetchBoard(int user_id);
 
 
         [OperationContract]
-        List<int> fetchList(int board_id);
+        List<Lists> fetchList(int board_id);
 
         [OperationContract]
-        List<int> fetchCard(int list_id);
+        List<Card> fetchCard(int list_id);
 
         [OperationContract]
         Dictionary<int, string> fetchUsers(int user_id);
@@ -45,6 +45,9 @@ namespace Scrum
 
         [OperationContract]
         bool updateCard(int card_id, string cardname, string c_info);
+
+        [OperationContract]
+        bool delCard(int card_id);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
@@ -73,5 +76,182 @@ namespace Scrum
             get { return stringValue; }
             set { stringValue = value; }
         }
+    }
+
+    [DataContract]
+    public class User
+    {
+        private int user_id;
+        private string username;
+        private string password;
+        private string create_date;
+        private string email;
+        private string contact;
+
+        [DataMember]
+        public int Id
+        {
+            get { return user_id; }
+            set { user_id = value; }
+        }
+
+        [DataMember]
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+
+        [DataMember]
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+
+        [DataMember]
+        public string Date
+        {
+            get { return create_date; }
+            set { create_date = value; }
+        }
+
+        [DataMember]
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+
+        [DataMember]
+        public string Contact
+        {
+            get { return contact; }
+            set { contact = value; }
+        }
+    }
+
+    [DataContract]
+    public class Board
+    {
+        private int board_id;
+        private string boardname;
+        private string create_date;
+        private int created_by;
+
+        [DataMember]
+        public int Id
+        {
+            get { return board_id; }
+            set { board_id = value; }
+        }
+
+        [DataMember]
+        public string Boardname
+        {
+            get { return boardname; }
+            set { boardname = value; }
+        }
+        
+
+        [DataMember]
+        public string Date
+        {
+            get { return create_date; }
+            set { create_date = value; }
+        }
+
+        [DataMember]
+        public int Creater
+        {
+            get { return created_by; }
+            set { created_by = value; }
+        }
+
+    }
+
+    [DataContract]
+    public class Lists
+    {
+        private int list_id;
+        private string listname;
+        private string create_date;
+        private int created_by;
+
+        [DataMember]
+        public int Id
+        {
+            get { return list_id; }
+            set { list_id = value; }
+        }
+
+        [DataMember]
+        public string Listname
+        {
+            get { return listname; }
+            set { listname = value; }
+        }
+
+
+        [DataMember]
+        public string Date
+        {
+            get { return create_date; }
+            set { create_date = value; }
+        }
+
+        [DataMember]
+        public int Creater
+        {
+            get { return created_by; }
+            set { created_by = value; }
+        }
+
+    }
+
+    [DataContract]
+    public class Card
+    {
+        private int card_id;
+        private string cardname;
+        private string c_info;
+        private string create_date;
+        private int created_by;
+
+        [DataMember]
+        public int Id
+        {
+            get { return card_id; }
+            set { card_id = value; }
+        }
+
+        [DataMember]
+        public string Cardname
+        {
+            get { return cardname; }
+            set { cardname = value; }
+        }
+
+        [DataMember]
+        public string Cinfo
+        {
+            get { return c_info; }
+            set { c_info = value; }
+        }
+
+        [DataMember]
+        public string Date
+        {
+            get { return create_date; }
+            set { create_date = value; }
+        }
+
+        [DataMember]
+        public int Creater
+        {
+            get { return created_by; }
+            set { created_by = value; }
+        }
+
     }
 }
